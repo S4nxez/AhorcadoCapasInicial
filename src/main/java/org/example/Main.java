@@ -17,13 +17,14 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println(Constantes.MENU + "\n" + Constantes.JUGAR + "\n" + Constantes.GEST);
+        System.out.println(Constantes.MENU + "\n--------------------------\n" + Constantes.JUGAR + "\n" + Constantes.GEST+"\n--------------------------");
         int o = sc.nextInt();
         if (o == 1){
             Juego.intro();
             Juego.setResultado();
+            System.out.println(Juego.getResultado());
             while(!Juego.getFinPartida())Juego.mainBucle();
-            if (Juego.getAciertos()==4) System.out.println("Enhorabuena, has ganado");
+            if (Juego.getResultado().equals(Juego.getRespuesta())) System.out.println("Enhorabuena, has ganado");
             else System.out.println("Has perdido, la palabra era "+Juego.getResultado());
         }
         else if(o==2){

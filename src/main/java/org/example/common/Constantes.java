@@ -4,8 +4,8 @@ public class Constantes {
     public static final String FICHERO = "elementos";
     public static final String FICHEROB = "copiaSeguridad";
     public static final String MENU = "Introduce opción: ";
-    public static final String JUGAR = "Jugar";
-    public static final String GEST = "Gestionar Diccionario";
+    public static final String JUGAR = "1·Jugar";
+    public static final String GEST = "2·Gestionar Diccionario";
 
     public static final String OPCION1 ="Listar Diccionario Ordenado";
     public static final String OPCION2 = "Insertar un elemento al diccionario";

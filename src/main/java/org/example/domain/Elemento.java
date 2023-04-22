@@ -41,5 +41,4 @@ public class Elemento {
         Comprobacion.categoriaOk(categoria);
         this.categoria = categoria;
     }
-    //prueba1
 }
