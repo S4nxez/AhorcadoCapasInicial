@@ -1,11 +1,5 @@
 package org.example.domain;
 
-
-import org.example.common.Categoria;
-import org.example.common.CategoriaException;
-import org.example.common.Comprobacion;
-import org.example.common.RespuestaException;
-
 import java.io.*;
 import java.util.Scanner;
 
@@ -24,6 +18,7 @@ public class Juego {
     private static String respuesta="_";
     private static String resultado;
     private static int aciertos, vidas=5;
+    static private char semiRespuesta[]= new char[]{'_', '_', '_', '_'};
 
     public static void setResultado() throws IOException {
         FileInputStream flujoEntrada = new FileInputStream(diccionario);
@@ -56,15 +51,16 @@ public class Juego {
 //      respuesta = filtrarRespuestas();// no se si es mejor usar esto o hacer un try catch y lo de si es mejor en el main o en la clase que sea el try catch tampoco lo entiendo
         respuesta = respuesta.toLowerCase();
         char respTemp = respuesta.charAt(0);
-        if (respuesta.length()>1) System.out.println("La respuesta debe contener solo un caracter, tu respuesta es: "+ respTemp);//  no se si esto deberia hacerlo con el try catch
+        if (respuesta.length()>1&&respuesta.length()!=4) System.out.println("La respuesta debe contener solo un caracter, tu respuesta es: "+ respTemp);//  no se si esto deberia hacerlo con el try catch
         try {
             for(int i=0;i!=4;i++){
                 char resulTemp = resultado.charAt(i);
                 if(respTemp==resulTemp) {
-                    System.out.print(resultado.charAt(i));
+                //    System.out.print(resultado.charAt(i));
+                        semiRespuesta[i]=resultado.charAt(i);
                 }
-                else System.out.print("_ ");
             }
+            System.out.println(semiRespuesta);
         }catch (Exception e){
             System.out.println("ERROR: La respuesta debe tener una longitud de 4 carácteres.");
             // si leo aqui la respuesta otra vez no sirve de nada de la otra forma funciona mejor además que con esto no nota si meto una larga
@@ -105,7 +101,6 @@ public class Juego {
         System.out.println("\nTienes 5 vidas para adivinar la palabra");
         System.out.println("_ _ _ _ ");
         respuesta = sc.nextLine();
-
     }
 
     public static boolean getFinPartida(){
