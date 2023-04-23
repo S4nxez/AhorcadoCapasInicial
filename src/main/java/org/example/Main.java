@@ -3,7 +3,6 @@ package org.example;
 import org.example.common.CategoriaException;
 import org.example.common.Comprobacion;
 import org.example.common.Categoria;
-import org.example.common.Constantes;
 import org.example.domain.Juego;
 import org.example.ui.GestionDiccionario;
 
@@ -17,7 +16,6 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println(Constantes.MENU + "\n--------------------------\n" + Constantes.JUGAR + "\n" + Constantes.GEST+"\n--------------------------");
         int o = sc.nextInt();
         if (o == 1){
             Juego.intro();

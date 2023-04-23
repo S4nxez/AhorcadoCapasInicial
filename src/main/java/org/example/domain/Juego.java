@@ -90,30 +90,21 @@ public class Juego {
 
 
     public static void intro(){
-        System.out.println("***-----------------------***");
-        System.out.println(" * 1·Jugar                 * ");
-        System.out.println(" * 2·Gestionar diccionario * ");
-        System.out.println("***-----------------------***");
-        int o = sc.nextInt();
+
+        System.out.println("1·Recuperar la última partida");
+        System.out.println("2·Partida nueva");
+        int o=sc.nextInt();
+        //sc.nextLine();
         switch (o){
             case 1:
-                System.out.println("1·Recuperar la última partida");
-                System.out.println("2·Partida nueva");
-                o=sc.nextInt();
-                sc.nextLine();
                 break;
 
             case 2:
-                System.out.println("1·Listar diccionario ordenado");
-                System.out.println("2·Insertar un elemento diccionario");
-                System.out.println("3·Modificar algún campo de un elemento del diccionario");
-                System.out.println("4·Eliminar un elemento del diccionario");
-                o=sc.nextInt();
-                sc.nextLine();
                 break;
         }
         System.out.println("\nTienes 5 vidas para adivinar la palabra");
         System.out.println("_ _ _ _ ");
+        respuesta = sc.nextLine();
 
     }
 

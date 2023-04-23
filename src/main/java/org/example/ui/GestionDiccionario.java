@@ -15,6 +15,15 @@ import org.example.domain.Juego; // he hecho esto para poder importar el diccion
 
 public class GestionDiccionario {
     private static final String pass = "2223";
+    static Scanner sc = new Scanner(System.in);
+    static void intro(){
+        System.out.println("1·Listar diccionario ordenado");
+        System.out.println("2·Insertar un elemento diccionario");
+        System.out.println("3·Modificar algún campo de un elemento del diccionario");
+        System.out.println("4·Eliminar un elemento del diccionario");
+        int o=sc.nextInt();
+        sc.nextLine();
+    }
 
     public static int mostrarMenu(){
         Scanner sc = new Scanner(System.in);
