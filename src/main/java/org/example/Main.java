@@ -22,7 +22,7 @@ public class Main {
             Juego.setResultado();
             System.out.println(Juego.getResultado());
             while(!Juego.getFinPartida())Juego.mainBucle();
-            if (Juego.getResultado().equals(Juego.getRespuesta())) System.out.println("Enhorabuena, has ganado");
+            if (Juego.getResultado().equals(Juego.getRespuesta())||Juego.getRespuestaTrozos().equals(Juego.getRespuesta())) System.out.println("Enhorabuena, has ganado");
             else System.out.println("Has perdido, la palabra era "+Juego.getResultado());
         }
         else if(o==2){
